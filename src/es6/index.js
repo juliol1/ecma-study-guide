@@ -126,7 +126,7 @@ helloPromise()
     .then(() => console.log('hola'))
     .catch(error => console.log(error));
 
-
+// class
 
 class calculator {
     constructor() {
@@ -142,3 +142,26 @@ class calculator {
 
 const calc = new calculator();
 console.log(calc.sum(2,2));
+
+// import y export
+
+import { hello } from './module.js';
+
+hello();
+
+// generators retorna una serie de valores
+// segun el algoritmo definido
+
+function* helloWorld() {
+    if (true) {
+        yield 'hello, ';
+    }
+    if (true) {
+        yield 'World';
+    }
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
+console.log(generatorHello.next().value);
